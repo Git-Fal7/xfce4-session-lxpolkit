@@ -19,7 +19,7 @@ optdepends=('gnome-keyring: for keyring support when GNOME compatibility is enab
             'gnome-screensaver: for locking screen with xflock4'
             'xlockmore: for locking screen with xflock4'
             'slock: for locking screen with xflock4')
-source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2
+source=(https://archive.xfce.org/src/xfce/xfce4-session/${pkgver%.*}/xfce4-session-$pkgver.tar.bz2
         source-system-xinitrc-scripts.patch
         xfce-lxpolkit.desktop)
 sha256sums=('22f273f212481d71e0b5618c62710cd85f69aea74f5ea5c0093f7918b07d17b7'
@@ -27,14 +27,14 @@ sha256sums=('22f273f212481d71e0b5618c62710cd85f69aea74f5ea5c0093f7918b07d17b7'
             'SKIP')
 
 prepare() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "$srcdir/xfce4-session-$pkgver"
 
   # https://bugzilla.xfce.org/show_bug.cgi?id=15440
   patch -Np1 -i ../source-system-xinitrc-scripts.patch
 }
 
 build() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "$srcdir/xfce4-session-$pkgver"
 
   ./configure \
     --prefix=/usr \
@@ -47,7 +47,7 @@ build() {
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "$srcdir/xfce4-session-$pkgver"
   make DESTDIR="$pkgdir" install
 
   # Provide a default PolicyKit Authentication Agent (FS#42569)

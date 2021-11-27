@@ -20,7 +20,7 @@ optdepends=('gnome-keyring: for keyring support when GNOME compatibility is enab
             'slock: for locking screen with xflock4')
 source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver.tar.bz2
         source-system-xinitrc-scripts.patch
-        xfce-polkit-gnome-authentication-agent-1.desktop)
+        xfce-lxpolkit.desktop)
 sha256sums=('22f273f212481d71e0b5618c62710cd85f69aea74f5ea5c0093f7918b07d17b7'
             '6f14d529e4c4f30cd547110bd444cee8dc70c90511a397de18acb6c1fd63ea3e'
             'SKIP')
@@ -51,7 +51,7 @@ package() {
 
   # Provide a default PolicyKit Authentication Agent (FS#42569)
   install -d "$pkgdir/etc/xdg/autostart"
-  cp "$srcdir/xfce-polkit-gnome-authentication-agent-1.desktop" \
+  cp "$srcdir/xfce-lxpolkit.desktop" \
     "$pkgdir/etc/xdg/autostart/"
 }
 

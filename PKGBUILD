@@ -1,7 +1,7 @@
 # Maintainer: Evangelos Foutras <evangelos@foutrelis.com>
 # Contributor: tobias <tobias funnychar archlinux.org>
 
-pkgname=xfce4-session
+pkgname=xfce4-session-lxpolkit
 pkgver=4.16.0
 pkgrel=2
 pkgdesc="Session manager for Xfce"
@@ -9,6 +9,7 @@ arch=('x86_64')
 url="https://docs.xfce.org/xfce/xfce4-session/start"
 license=('GPL2')
 groups=('xfce4')
+conflicts=('xfce4-session')
 depends=('libxfce4ui' 'libwnck3' 'xfconf' 'libsm' 'polkit' 'xorg-iceauth'
          'xorg-xinit' 'xorg-xrdb' 'lxpolkit' 'hicolor-icon-theme')
 makedepends=('intltool')

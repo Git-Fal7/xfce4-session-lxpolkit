@@ -23,7 +23,7 @@ source=(https://archive.xfce.org/src/xfce/$pkgname/${pkgver%.*}/$pkgname-$pkgver
         xfce-polkit-gnome-authentication-agent-1.desktop)
 sha256sums=('22f273f212481d71e0b5618c62710cd85f69aea74f5ea5c0093f7918b07d17b7'
             '6f14d529e4c4f30cd547110bd444cee8dc70c90511a397de18acb6c1fd63ea3e'
-            '74c94c5f7893d714e04ec7d8b8520c978a5748757a0cdcf5128492f09f31b643')
+            'SKIP')
 
 prepare() {
   cd "$srcdir/$pkgname-$pkgver"

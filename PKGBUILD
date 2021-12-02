@@ -20,11 +20,9 @@ optdepends=('gnome-keyring: for keyring support when GNOME compatibility is enab
             'xlockmore: for locking screen with xflock4'
             'slock: for locking screen with xflock4')
 source=(https://archive.xfce.org/src/xfce/xfce4-session/${pkgver%.*}/xfce4-session-$pkgver.tar.bz2
-        source-system-xinitrc-scripts.patch
-        xfce-lxpolkit.desktop)
+        source-system-xinitrc-scripts.patch)
 sha256sums=('22f273f212481d71e0b5618c62710cd85f69aea74f5ea5c0093f7918b07d17b7'
-            '6f14d529e4c4f30cd547110bd444cee8dc70c90511a397de18acb6c1fd63ea3e'
-            'SKIP')
+            '6f14d529e4c4f30cd547110bd444cee8dc70c90511a397de18acb6c1fd63ea3e')
 
 prepare() {
   cd "$srcdir/xfce4-session-$pkgver"

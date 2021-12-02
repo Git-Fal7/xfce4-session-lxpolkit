@@ -50,8 +50,6 @@ package() {
 
   # Provide a default PolicyKit Authentication Agent (FS#42569)
   install -d "$pkgdir/etc/xdg/autostart"
-  cp "$srcdir/xfce-lxpolkit.desktop" \
-    "$pkgdir/etc/xdg/autostart/"
 }
 
 # vim:set ts=2 sw=2 et:

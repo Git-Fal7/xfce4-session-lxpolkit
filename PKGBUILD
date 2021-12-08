@@ -11,7 +11,7 @@ license=('GPL2')
 groups=('xfce4')
 conflicts=('xfce4-session')
 depends=('libxfce4ui' 'libwnck3' 'xfconf' 'libsm' 'polkit' 'xorg-iceauth'
-         'xorg-xinit' 'xorg-xrdb' 'lxpolkit' 'hicolor-icon-theme' 'libxfce4util')
+         'xorg-xinit' 'xorg-xrdb' 'hicolor-icon-theme' 'libxfce4util')
 makedepends=('intltool')
 optdepends=('gnome-keyring: for keyring support when GNOME compatibility is enabled'
             'xfce4-screensaver: for locking screen with xflock4'
